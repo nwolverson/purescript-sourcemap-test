@@ -2,7 +2,7 @@
 
 Simple setup showing end to end source maps with webpack. This skips using purs-loader which would need the extra flag added.
 
-Build `psc` from here: https://github.com/nwolverson/purescript/tree/sourcemap-pr
+Works with `psc` as of [0.8.1](https://github.com/purescript/purescript/releases/tag/v0.8.1)
 
 Usage:
 ```
