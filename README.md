@@ -36,7 +36,9 @@ webpack-dev-server
 ### Browserify
 
 It's possible to do the same with browserify, but browserify does not in itself
-combine source maps from its own process with input source maps.
+combine source maps from its own process with input source maps. One option is to
+use [sorcery](https://github.com/Rich-Harris/sorcery) to glue purescript and browserify
+source maps together.
 
 Usage:
 ```
