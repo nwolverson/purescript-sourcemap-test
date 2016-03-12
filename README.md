@@ -41,11 +41,10 @@ combine source maps from its own process with input source maps.
 Usage:
 ```
 bower install && npm install
-npm install -g webpack-dev-server
 
 pulp build --source-maps
 browserify --debug .browserify.js -o browserify.js
 sorcery -i browserify.js
 
-webpack-dev-server
+http-server
 ```
