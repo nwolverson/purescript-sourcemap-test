@@ -7,7 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pulp build -r ../ --source-maps",
+    "build-all": "npm run build && npm run webpack && npm run browserify",
+    "webpack": "webpack -c webpack.config.js",
+    "browserify": "browserify --debug .browserify.js -o browserify.js && sorcery -i browserify.js"
   },
   "author": "",
   "license": "ISC",
