@@ -1,6 +1,6 @@
 module Main where
 
-import Prelude (Unit, bind, (++))
+import Prelude (Unit, bind, (<>))
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (CONSOLE, log)
 
@@ -8,9 +8,9 @@ import Control.Monad.Eff.Console (CONSOLE, log)
 say :: forall e. String -> String -> String -> Eff (console :: CONSOLE | e) Unit
 say a =
   \b ->
-    \c ->
+    \c -> do
       log
-        (a ++ b ++ c)
+        (a <> b <> c)
 
 main :: forall e. Eff (console :: CONSOLE | e) Unit
 main = do
