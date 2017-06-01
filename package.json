@@ -8,9 +8,10 @@
   },
   "scripts": {
     "build": "pulp build -- --source-maps",
-    "build-all": "npm run build && npm run webpack && npm run browserify",
+    "build-all": "npm run build && npm run webpack && npm run browserify && npm run bundle",
     "webpack": "webpack",
-    "browserify": "browserify --debug .browserify.js -o browserify.js && sorcery -i browserify.js"
+    "browserify": "browserify --debug .browserify.js -o browserify.js && sorcery -i browserify.js",
+    "bundle": "psc-bundle 'output/*/*.js' -m Main --main Main -o bundle.js --source-maps && sorcery -i bundle.js"
   },
   "author": "",
   "license": "ISC",
