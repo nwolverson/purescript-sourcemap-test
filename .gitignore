@@ -2,4 +2,8 @@
 /node_modules/
 /.pulp-cache/
 /output/
+.vscode/
 /.psci*
+browserify.js*
+bundle.js*
+app.js*
