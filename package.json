@@ -1,21 +1,17 @@
 {
   "name": "purescript-sourcemap-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "private": true,
   "scripts": {
     "build": "pulp build -- --source-maps",
-    "build-all": "npm run build && npm run webpack && npm run browserify && npm run bundle",
+    "build-all": "run-s build webpack browserify bundle",
     "webpack": "webpack",
     "browserify": "browserify --debug .browserify.js -o browserify.js && sorcery -i browserify.js",
     "bundle": "psc-bundle 'output/*/*.js' -m Main --main Main -o bundle.js --source-maps && sorcery -i bundle.js"
   },
-  "author": "",
+  "author": "Nicholas Wolverson",
   "license": "ISC",
   "devDependencies": {
+    "npm-run-all": "^4.1.1",
     "source-map-loader": "^0.1.5"
   }
 }
